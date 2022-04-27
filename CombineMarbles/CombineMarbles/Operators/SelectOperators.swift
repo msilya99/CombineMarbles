@@ -13,7 +13,7 @@ extension OperatorCollection {
         operators: [
             SingleOperator<String> (
                 name: "first",
-                description: "publisher.first()",
+                description: "first()",
                 documentationURL: "https://developer.apple.com/documentation/combine/publisher/3204710-first",
                 operation: { pub, _ in pub
                     .first()
@@ -22,7 +22,7 @@ extension OperatorCollection {
             ),
             SingleOperator<String> (
                 name: "first(where:)",
-                description: "publisher.first(where: { $0 > 3 })",
+                description: "first(where: { $0 > 3 })",
                 documentationURL: "https://developer.apple.com/documentation/combine/publisher/3204711-first",
                 operation: { pub, _ in pub
                     .compactMap { Int($0)}
@@ -33,7 +33,7 @@ extension OperatorCollection {
             ),
             SingleOperator<String> (
                 name: "tryFirst(where:)",
-                description: "publisher.tryFirst(where: { $0 > 3 })",
+                description: "tryFirst(where: { $0 > 3 })",
                 documentationURL: "https://developer.apple.com/documentation/combine/publisher/3204770-tryfirst",
                 operation: { pub, _ in pub
                     .compactMap { Int($0)}
@@ -45,7 +45,7 @@ extension OperatorCollection {
             ),
             SingleOperator<String> (
                 name: "last",
-                description: "publisher.last()",
+                description: "last()",
                 documentationURL: "https://developer.apple.com/documentation/combine/publisher/3204715-last",
                 operation: { pub, _ in pub
                     .last()
@@ -54,7 +54,7 @@ extension OperatorCollection {
             ),
             SingleOperator<String> (
                 name: "last(where:)",
-                description: "publisher.last(where: { $0 > 3 })",
+                description: "last(where: { $0 > 3 })",
                 documentationURL: "https://developer.apple.com/documentation/combine/publisher/3204716-last",
                 operation: { pub, _ in pub
                     .compactMap { Int($0)}
@@ -65,7 +65,7 @@ extension OperatorCollection {
             ),
             SingleOperator<String> (
                 name: "tryLast(where:)",
-                description: "publisher.tryLast(where: { $0 > 3 })",
+                description: "tryLast(where: { $0 > 3 })",
                 documentationURL: "https://developer.apple.com/documentation/combine/publisher/3204771-trylast",
                 operation: { pub, _ in pub
                     .compactMap { Int($0)}
@@ -77,7 +77,7 @@ extension OperatorCollection {
             ),
             SingleOperator<String> (
                 name: "output(at:)",
-                description: "publisher.output(at: 2)",
+                description: "output(at: 2)",
                 documentationURL: "https://developer.apple.com/documentation/combine/publisher/3204735-output",
                 operation: { pub, _ in pub
                     .compactMap { Int($0)}
@@ -89,7 +89,7 @@ extension OperatorCollection {
             ),
             SingleOperator<String> (
                 name: "output<R>(in:)",
-                description: "publisher.output(1..<3)",
+                description: "output(1..<3)",
                 documentationURL: "https://developer.apple.com/documentation/combine/publisher/3204736-output",
                 operation: { pub, _ in pub
                     .compactMap { Int($0)}

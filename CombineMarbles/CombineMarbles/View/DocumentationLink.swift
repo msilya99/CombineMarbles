@@ -14,13 +14,12 @@ struct DocumentationLink: View {
     var body: some View {
         if let url = URL(string: url) {
             Link(destination: url) {
-                HStack {
-                    Text(" Documentation for ") +
-                    Text(self.name)
-                    Spacer()
-                    Image(systemName: "chevron.right")
-                }.padding(EdgeInsets(top: 8, leading: 0, bottom: 8, trailing: 0))
-            }
+                Text(" Documentation for \(self.name)")
+                    .lineLimit(1)
+                    .scaledToFit()
+                    .minimumScaleFactor(0.01)
+                    .padding(16)
+            }.frame(maxWidth: .infinity, alignment: .center)
         }
     }
 }

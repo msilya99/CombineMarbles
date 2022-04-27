@@ -21,7 +21,7 @@ extension OperatorCollection {
             ),
             SingleOperator<String> (
                 name: "drop(while:)",
-                description: "publisher.drop(while: {$0 < 3 })",
+                description: "drop(while: {$0 < 3 })",
                 documentationURL: "https://developer.apple.com/documentation/combine/publisher/3204706-drop",
                 operation: { pub, _ in pub
                     .compactMap { Int($0) }
@@ -32,7 +32,7 @@ extension OperatorCollection {
             ),
             SingleOperator<String> (
                 name: "dropFirst(Int)",
-                description: "publisher.dropFirst(3)",
+                description: "dropFirst(3)",
                 documentationURL: "https://developer.apple.com/documentation/combine/publisher/3204707-dropfirst",
                 operation: { pub, _ in pub
                     .dropFirst(3)
@@ -41,7 +41,7 @@ extension OperatorCollection {
             ),
             SingleOperator<String> (
                 name: "append()",
-                description: "publisher.append(\"1\")",
+                description: "append(\"1\")",
                 documentationURL: "https://developer.apple.com/documentation/combine/publisher/3204684-append",
                 operation: { pub, _ in pub.append("1").eraseToAnyPublisher() },
                 input: [
@@ -60,7 +60,7 @@ extension OperatorCollection {
             ),
             SingleOperator<String> (
                 name: "prepend()",
-                description: "publisher.prepend(\"1\")",
+                description: "prepend(\"1\")",
                 documentationURL: "https://developer.apple.com/documentation/combine/publisher/3204739-prepend",
                 operation: { pub, _ in pub.prepend("1").eraseToAnyPublisher() },
                 input: [
@@ -88,7 +88,7 @@ extension OperatorCollection {
             ),
             SingleOperator<String> (
                 name: "prefix(Int)",
-                description: "publisher.prefix(3)",
+                description: "prefix(3)",
                 documentationURL: "https://developer.apple.com/documentation/combine/publisher/3204737-prefix",
                 operation: { pub, _ in pub
                     .prefix(3)
@@ -97,7 +97,7 @@ extension OperatorCollection {
             ),
             SingleOperator<String> (
                 name: "prefix(while:)",
-                description: "publisher.prefix(while: {$0 < 3 })",
+                description: "prefix(while: {$0 < 3 })",
                 documentationURL: "https://developer.apple.com/documentation/combine/publisher/3204738-prefix",
                 operation: { pub, _ in pub
                     .compactMap { Int($0) }
@@ -108,7 +108,7 @@ extension OperatorCollection {
             ),
             SingleOperator<String> (
                 name: "tryPrefix(while:)",
-                description: "publisher.tryPrefix(while: {$0 < 3 })",
+                description: "tryPrefix(while: {$0 < 3 })",
                 documentationURL: "https://developer.apple.com/documentation/combine/publisher/3204775-tryprefix",
                 operation: { pub, _ in pub
                     .compactMap { Int($0) }

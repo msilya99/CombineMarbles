@@ -14,11 +14,13 @@ struct Marble: View {
     var body: some View {
         ZStack {
             Circle()
-                .frame(width: 30, height: 30)
+                .frame(width: 36, height: 36)
                 .foregroundColor(.primary)
-            Text(content ?? "")
-                .font(.system(size: 14))
-                .colorInvert()
+                .overlay(Text(content ?? "")
+                    .padding(2)
+                    .scaledToFit()
+                    .minimumScaleFactor(0.01)
+                    .colorInvert())
         }
     }
 

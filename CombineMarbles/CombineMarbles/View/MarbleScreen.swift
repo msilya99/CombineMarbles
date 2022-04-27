@@ -79,10 +79,11 @@ struct MarblesScreen: View {
             }
 
             Text(operation.description)
-                .padding(.vertical, 32)
-                .padding(.horizontal, 12)
-                .font(.system(size: 16))
-                .frame(maxWidth: .infinity, alignment: .leading)
+                .padding(16)
+                .background(RoundedRectangle(cornerRadius: 16).stroke(.foreground))
+                .font(.system(size: 20))
+                .frame(maxWidth: .infinity, alignment: .center)
+                .padding(.vertical, 16)
 
             MarbleLane(pos: $state.output, isDraggable: false)
                 .frame(height: 44)

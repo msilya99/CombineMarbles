@@ -11,6 +11,27 @@
 		B21A21A128199210006F59CA /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B21A21A028199210006F59CA /* ContentView.swift */; };
 		B21A21A328199210006F59CA /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B21A21A228199210006F59CA /* Assets.xcassets */; };
 		B21A21A628199210006F59CA /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B21A21A528199210006F59CA /* Preview Assets.xcassets */; };
+		B21A21B1281992D4006F59CA /* OperatorCollection.swift in Sources */ = {isa = PBXBuildFile; fileRef = B21A21B0281992D4006F59CA /* OperatorCollection.swift */; };
+		B21A21B3281992F5006F59CA /* Event.swift in Sources */ = {isa = PBXBuildFile; fileRef = B21A21B2281992F5006F59CA /* Event.swift */; };
+		B21A21B528199310006F59CA /* SequenceExperiment.swift in Sources */ = {isa = PBXBuildFile; fileRef = B21A21B428199310006F59CA /* SequenceExperiment.swift */; };
+		B21A21B72819933A006F59CA /* SequenceSheduler.swift in Sources */ = {isa = PBXBuildFile; fileRef = B21A21B62819933A006F59CA /* SequenceSheduler.swift */; };
+		B21A21B928199356006F59CA /* SequencePublisher.swift in Sources */ = {isa = PBXBuildFile; fileRef = B21A21B828199356006F59CA /* SequencePublisher.swift */; };
+		B21A21BF281993E4006F59CA /* Operator.swift in Sources */ = {isa = PBXBuildFile; fileRef = B21A21BE281993E4006F59CA /* Operator.swift */; };
+		B21A21C1281993FD006F59CA /* CombineOperators.swift in Sources */ = {isa = PBXBuildFile; fileRef = B21A21C0281993FD006F59CA /* CombineOperators.swift */; };
+		B21A21C328199413006F59CA /* FilterOperators.swift in Sources */ = {isa = PBXBuildFile; fileRef = B21A21C228199413006F59CA /* FilterOperators.swift */; };
+		B21A21C528199430006F59CA /* MapOperators.swift in Sources */ = {isa = PBXBuildFile; fileRef = B21A21C428199430006F59CA /* MapOperators.swift */; };
+		B21A21C72819944F006F59CA /* MatchingOperators.swift in Sources */ = {isa = PBXBuildFile; fileRef = B21A21C62819944F006F59CA /* MatchingOperators.swift */; };
+		B21A21C928199466006F59CA /* MathematicalOperators.swift in Sources */ = {isa = PBXBuildFile; fileRef = B21A21C828199466006F59CA /* MathematicalOperators.swift */; };
+		B21A21CB2819947D006F59CA /* ReduceOperators.swift in Sources */ = {isa = PBXBuildFile; fileRef = B21A21CA2819947D006F59CA /* ReduceOperators.swift */; };
+		B21A21CD28199497006F59CA /* SelectOperators.swift in Sources */ = {isa = PBXBuildFile; fileRef = B21A21CC28199497006F59CA /* SelectOperators.swift */; };
+		B21A21CF281994BF006F59CA /* SequenceOperators.swift in Sources */ = {isa = PBXBuildFile; fileRef = B21A21CE281994BF006F59CA /* SequenceOperators.swift */; };
+		B21A21D1281994D7006F59CA /* TimingOperators.swift in Sources */ = {isa = PBXBuildFile; fileRef = B21A21D0281994D7006F59CA /* TimingOperators.swift */; };
+		B21A21D528199523006F59CA /* DocumentationLink.swift in Sources */ = {isa = PBXBuildFile; fileRef = B21A21D428199523006F59CA /* DocumentationLink.swift */; };
+		B21A21D728199542006F59CA /* ErrorView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B21A21D628199542006F59CA /* ErrorView.swift */; };
+		B21A21D92819956E006F59CA /* FinishedView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B21A21D82819956E006F59CA /* FinishedView.swift */; };
+		B21A21DD281995AC006F59CA /* MarbleView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B21A21DC281995AC006F59CA /* MarbleView.swift */; };
+		B21A21DF281995C7006F59CA /* MarbleLane.swift in Sources */ = {isa = PBXBuildFile; fileRef = B21A21DE281995C7006F59CA /* MarbleLane.swift */; };
+		B21A21E1281995E7006F59CA /* MarbleScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = B21A21E0281995E7006F59CA /* MarbleScreen.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -19,6 +40,27 @@
 		B21A21A028199210006F59CA /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		B21A21A228199210006F59CA /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		B21A21A528199210006F59CA /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		B21A21B0281992D4006F59CA /* OperatorCollection.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OperatorCollection.swift; sourceTree = "<group>"; };
+		B21A21B2281992F5006F59CA /* Event.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Event.swift; sourceTree = "<group>"; };
+		B21A21B428199310006F59CA /* SequenceExperiment.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SequenceExperiment.swift; sourceTree = "<group>"; };
+		B21A21B62819933A006F59CA /* SequenceSheduler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SequenceSheduler.swift; sourceTree = "<group>"; };
+		B21A21B828199356006F59CA /* SequencePublisher.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SequencePublisher.swift; sourceTree = "<group>"; };
+		B21A21BE281993E4006F59CA /* Operator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Operator.swift; sourceTree = "<group>"; };
+		B21A21C0281993FD006F59CA /* CombineOperators.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CombineOperators.swift; sourceTree = "<group>"; };
+		B21A21C228199413006F59CA /* FilterOperators.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FilterOperators.swift; sourceTree = "<group>"; };
+		B21A21C428199430006F59CA /* MapOperators.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapOperators.swift; sourceTree = "<group>"; };
+		B21A21C62819944F006F59CA /* MatchingOperators.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MatchingOperators.swift; sourceTree = "<group>"; };
+		B21A21C828199466006F59CA /* MathematicalOperators.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MathematicalOperators.swift; sourceTree = "<group>"; };
+		B21A21CA2819947D006F59CA /* ReduceOperators.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReduceOperators.swift; sourceTree = "<group>"; };
+		B21A21CC28199497006F59CA /* SelectOperators.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SelectOperators.swift; sourceTree = "<group>"; };
+		B21A21CE281994BF006F59CA /* SequenceOperators.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SequenceOperators.swift; sourceTree = "<group>"; };
+		B21A21D0281994D7006F59CA /* TimingOperators.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimingOperators.swift; sourceTree = "<group>"; };
+		B21A21D428199523006F59CA /* DocumentationLink.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DocumentationLink.swift; sourceTree = "<group>"; };
+		B21A21D628199542006F59CA /* ErrorView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ErrorView.swift; sourceTree = "<group>"; };
+		B21A21D82819956E006F59CA /* FinishedView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FinishedView.swift; sourceTree = "<group>"; };
+		B21A21DC281995AC006F59CA /* MarbleView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MarbleView.swift; sourceTree = "<group>"; };
+		B21A21DE281995C7006F59CA /* MarbleLane.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MarbleLane.swift; sourceTree = "<group>"; };
+		B21A21E0281995E7006F59CA /* MarbleScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MarbleScreen.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -51,6 +93,9 @@
 		B21A219D28199210006F59CA /* CombineMarbles */ = {
 			isa = PBXGroup;
 			children = (
+				B21A21AE2819929B006F59CA /* View */,
+				B21A21AD28199288006F59CA /* Operators */,
+				B21A21AC28199284006F59CA /* Model */,
 				B21A219E28199210006F59CA /* CombineMarblesApp.swift */,
 				B21A21A028199210006F59CA /* ContentView.swift */,
 				B21A21A228199210006F59CA /* Assets.xcassets */,
@@ -65,6 +110,48 @@
 				B21A21A528199210006F59CA /* Preview Assets.xcassets */,
 			);
 			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		B21A21AC28199284006F59CA /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				B21A21B0281992D4006F59CA /* OperatorCollection.swift */,
+				B21A21B2281992F5006F59CA /* Event.swift */,
+				B21A21B428199310006F59CA /* SequenceExperiment.swift */,
+				B21A21B62819933A006F59CA /* SequenceSheduler.swift */,
+				B21A21B828199356006F59CA /* SequencePublisher.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		B21A21AD28199288006F59CA /* Operators */ = {
+			isa = PBXGroup;
+			children = (
+				B21A21BE281993E4006F59CA /* Operator.swift */,
+				B21A21C0281993FD006F59CA /* CombineOperators.swift */,
+				B21A21C228199413006F59CA /* FilterOperators.swift */,
+				B21A21C428199430006F59CA /* MapOperators.swift */,
+				B21A21C62819944F006F59CA /* MatchingOperators.swift */,
+				B21A21C828199466006F59CA /* MathematicalOperators.swift */,
+				B21A21CA2819947D006F59CA /* ReduceOperators.swift */,
+				B21A21CC28199497006F59CA /* SelectOperators.swift */,
+				B21A21CE281994BF006F59CA /* SequenceOperators.swift */,
+				B21A21D0281994D7006F59CA /* TimingOperators.swift */,
+			);
+			path = Operators;
+			sourceTree = "<group>";
+		};
+		B21A21AE2819929B006F59CA /* View */ = {
+			isa = PBXGroup;
+			children = (
+				B21A21D428199523006F59CA /* DocumentationLink.swift */,
+				B21A21D628199542006F59CA /* ErrorView.swift */,
+				B21A21D82819956E006F59CA /* FinishedView.swift */,
+				B21A21DC281995AC006F59CA /* MarbleView.swift */,
+				B21A21DE281995C7006F59CA /* MarbleLane.swift */,
+				B21A21E0281995E7006F59CA /* MarbleScreen.swift */,
+			);
+			path = View;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -137,8 +224,29 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B21A21C528199430006F59CA /* MapOperators.swift in Sources */,
+				B21A21B928199356006F59CA /* SequencePublisher.swift in Sources */,
+				B21A21E1281995E7006F59CA /* MarbleScreen.swift in Sources */,
+				B21A21CF281994BF006F59CA /* SequenceOperators.swift in Sources */,
+				B21A21C328199413006F59CA /* FilterOperators.swift in Sources */,
+				B21A21C1281993FD006F59CA /* CombineOperators.swift in Sources */,
+				B21A21B3281992F5006F59CA /* Event.swift in Sources */,
+				B21A21B528199310006F59CA /* SequenceExperiment.swift in Sources */,
+				B21A21D528199523006F59CA /* DocumentationLink.swift in Sources */,
+				B21A21CB2819947D006F59CA /* ReduceOperators.swift in Sources */,
 				B21A21A128199210006F59CA /* ContentView.swift in Sources */,
+				B21A21C72819944F006F59CA /* MatchingOperators.swift in Sources */,
+				B21A21CD28199497006F59CA /* SelectOperators.swift in Sources */,
+				B21A21C928199466006F59CA /* MathematicalOperators.swift in Sources */,
+				B21A21DF281995C7006F59CA /* MarbleLane.swift in Sources */,
 				B21A219F28199210006F59CA /* CombineMarblesApp.swift in Sources */,
+				B21A21D92819956E006F59CA /* FinishedView.swift in Sources */,
+				B21A21B72819933A006F59CA /* SequenceSheduler.swift in Sources */,
+				B21A21BF281993E4006F59CA /* Operator.swift in Sources */,
+				B21A21B1281992D4006F59CA /* OperatorCollection.swift in Sources */,
+				B21A21D1281994D7006F59CA /* TimingOperators.swift in Sources */,
+				B21A21D728199542006F59CA /* ErrorView.swift in Sources */,
+				B21A21DD281995AC006F59CA /* MarbleView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

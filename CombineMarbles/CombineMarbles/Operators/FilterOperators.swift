@@ -9,6 +9,7 @@ import Foundation
 import Combine
 
 extension OperatorCollection {
+
     static var filter = OperatorCollection(
         name: "Filtering Elements",
         operators: [
@@ -35,7 +36,6 @@ extension OperatorCollection {
                     .eraseToAnyPublisher() },
                 input: TimedEvent.defaultNumbers
             ),
-
             SingleOperator<String> (
                 name: "compactMap()",
                 description: "publisher.compactMap { $0 % 2 == 0 ? nil : \"e\"  }",
@@ -56,7 +56,6 @@ extension OperatorCollection {
                     .eraseToAnyPublisher() },
                 input: TimedEvent.defaultNumbers
             ),
-
             SingleOperator<String> (
                 name: "removeDuplicates()",
                 description: "publisher.removeDuplicates()",
@@ -83,12 +82,10 @@ extension OperatorCollection {
                     .finished(90)
                 ]
             ),
-
             SingleOperator<String> (
                 name: "tryRemoveDuplicates(by:)",
                 description: "publisher.tryRemoveDuplicates(by: { $0 == $1 })",
                 documentationURL: "https://developer.apple.com/documentation/combine/publisher/3204777-tryremoveduplicates",
-
                 operation: { pub, _ in pub
                     .tryRemoveDuplicates(by: { $0 == $1 })
                     .mapError { _ in FailureString(content: "") }
@@ -102,13 +99,13 @@ extension OperatorCollection {
                     .finished(90)
                 ]
             ),
-
             SingleOperator<String> (
                 name: "replaceError(with:)",
                 description: "publisher.replaceError(with: \"A\")",
                 documentationURL: "https://developer.apple.com/documentation/combine/publisher/3204748-replaceerror",
                 operation: { pub, _ in pub
                         .replaceError(with: "A")
+                        .mapError { _ in FailureString(content: "") }
                         .eraseToAnyPublisher() },
                 input: [
                     .next(10, "1"),
@@ -117,7 +114,6 @@ extension OperatorCollection {
                     .error(70, "")
                 ]
             )
-
         ]
     )
 }

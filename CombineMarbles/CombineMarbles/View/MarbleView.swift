@@ -17,8 +17,8 @@ struct Marble: View {
                 .frame(width: 30, height: 30)
                 .foregroundColor(.primary)
             Text(content ?? "")
-                .foregroundColor(.white)
                 .font(.system(size: 14))
+                .colorInvert()
         }
     }
 

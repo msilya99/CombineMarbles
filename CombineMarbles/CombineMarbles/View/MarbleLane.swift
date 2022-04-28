@@ -40,7 +40,7 @@ struct MarbleLane: View {
                         .gesture(DragGesture().onChanged {
                             guard self.isDraggable else { return }
                             if let index = self.pos.firstIndex(of: element),
-                               $0.location.x > 4,
+                               $0.location.x > 0,
                                $0.location.x < proxy.size.width {
                                 self.pos[index].pos = proxy.normalize(x: $0.location.x)
                             }
@@ -76,12 +76,12 @@ private extension TimedEvent {
 
 private extension GeometryProxy {
     func normalize(x: CGFloat) -> Double {
-        let width = frame(in: .global).width
+        let width = frame(in: .local).width
         return Double(x / width)
     }
 
     func denormalize(x: Double) -> CGFloat {
-        let width = frame(in: .global).width
+        let width = frame(in: .local).width
         return CGFloat(x) * width
     }
 }

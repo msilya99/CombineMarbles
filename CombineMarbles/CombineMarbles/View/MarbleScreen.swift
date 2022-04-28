@@ -10,6 +10,7 @@ import Combine
 
 class MarbleViewState: ObservableObject {
 
+    private let initionalState: (input: [[TimedEvent]], generator: ([SequancePublisher], SequnceScheduler) -> SequanceExperimentRunner)
     private var generator: ([SequancePublisher], SequnceScheduler) -> SequanceExperimentRunner
     private var cancellable = Set<AnyCancellable>()
 
@@ -22,6 +23,7 @@ class MarbleViewState: ObservableObject {
     init(input: [[TimedEvent]], generator: @escaping ([SequancePublisher], SequnceScheduler) -> SequanceExperimentRunner) {
         self.input = input
         self.generator = generator
+        self.initionalState = (input, generator)
     }
 
     func update() {
@@ -32,11 +34,15 @@ class MarbleViewState: ObservableObject {
             .assign(to: \.output, on: self)
             .store(in: &cancellable)
     }
+
+    func resetToInitionalState() {
+        input = initionalState.input
+        generator = initionalState.generator
+    }
 }
 
 extension TupleOperator {
     var state: MarbleViewState {
-
         return MarbleViewState(
             input: [input1, input2],
             generator: { publisher, _ in
@@ -96,8 +102,10 @@ struct MarblesScreen: View {
             Spacer()
         }
         .padding(.vertical, 36)
-        .padding(.horizontal, 12)
+        .padding(.horizontal, 16)
         .navigationBarTitle(operation.name)
+        .toolbar { Button("Reset") { self.state.resetToInitionalState() } }
         .onAppear { self.state.update() }
+        .onDisappear { self.state.resetToInitionalState() }
     }
 }

@@ -48,7 +48,6 @@ struct SequancePublisher: Publisher {
         }
 
         func request(_ demand: Subscribers.Demand) {
-
             if let last = events.last, scheduler.now.distance(to: .milliseconds(last.timeInterval)) < 0 {
                 subscriber?.receive(completion: .finished)
                 return

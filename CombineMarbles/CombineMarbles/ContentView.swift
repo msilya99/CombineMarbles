@@ -9,17 +9,7 @@ import SwiftUI
 import Combine
 
 struct ContentView: View {
-    let content: [OperatorCollection] = [
-        .map,
-        .filter,
-        .reduce,
-        .mathematical,
-        .matching,
-        .sequence,
-        .select,
-        .combine,
-        .timing
-    ]
+    let content: [OperatorCollection] = Operators.allCases.map { $0.getOperatorCollection() }
 
     var body: some View {
         NavigationView {

@@ -32,6 +32,7 @@
 		B21A21DD281995AC006F59CA /* MarbleView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B21A21DC281995AC006F59CA /* MarbleView.swift */; };
 		B21A21DF281995C7006F59CA /* MarbleLane.swift in Sources */ = {isa = PBXBuildFile; fileRef = B21A21DE281995C7006F59CA /* MarbleLane.swift */; };
 		B21A21E1281995E7006F59CA /* MarbleScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = B21A21E0281995E7006F59CA /* MarbleScreen.swift */; };
+		B27BEFC2281A9E51001F9103 /* Operators.swift in Sources */ = {isa = PBXBuildFile; fileRef = B27BEFC1281A9E51001F9103 /* Operators.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -61,6 +62,7 @@
 		B21A21DC281995AC006F59CA /* MarbleView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MarbleView.swift; sourceTree = "<group>"; };
 		B21A21DE281995C7006F59CA /* MarbleLane.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MarbleLane.swift; sourceTree = "<group>"; };
 		B21A21E0281995E7006F59CA /* MarbleScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MarbleScreen.swift; sourceTree = "<group>"; };
+		B27BEFC1281A9E51001F9103 /* Operators.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Operators.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -120,6 +122,7 @@
 				B21A21B428199310006F59CA /* SequenceExperiment.swift */,
 				B21A21B62819933A006F59CA /* SequenceSheduler.swift */,
 				B21A21B828199356006F59CA /* SequencePublisher.swift */,
+				B27BEFC1281A9E51001F9103 /* Operators.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -241,6 +244,7 @@
 				B21A21DF281995C7006F59CA /* MarbleLane.swift in Sources */,
 				B21A219F28199210006F59CA /* CombineMarblesApp.swift in Sources */,
 				B21A21D92819956E006F59CA /* FinishedView.swift in Sources */,
+				B27BEFC2281A9E51001F9103 /* Operators.swift in Sources */,
 				B21A21B72819933A006F59CA /* SequenceSheduler.swift in Sources */,
 				B21A21BF281993E4006F59CA /* Operator.swift in Sources */,
 				B21A21B1281992D4006F59CA /* OperatorCollection.swift in Sources */,

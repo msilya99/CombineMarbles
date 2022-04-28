@@ -23,7 +23,7 @@ struct MarblesScreen: View {
             VStack(spacing: 24) {
                 ForEach(0..<state.input.count) {
                     MarbleLane(pos: self.$state.input[$0], isDraggable: true)
-                        .frame(height: 44)
+                        .frame(height: 50)
                 }
             }
 
@@ -35,7 +35,7 @@ struct MarblesScreen: View {
                 .padding(.vertical, 16)
 
             MarbleLane(pos: $state.output, isDraggable: false)
-                .frame(height: 44)
+                .frame(height: 50)
 
             DocumentationLink(
                 name: self.operation.name,
@@ -44,11 +44,10 @@ struct MarblesScreen: View {
             .padding(.top, 16)
             Spacer()
         }
-        .padding(.vertical, 36)
-        .padding(.horizontal, 16)
+        .padding(.vertical, 32)
+        .padding(.horizontal, 24)
         .navigationBarTitle(operation.name)
         .toolbar { Button("Reset") { self.state.resetToInitionalState() } }
         .onAppear { self.state.update() }
-        .onDisappear { self.state.resetToInitionalState() }
     }
 }

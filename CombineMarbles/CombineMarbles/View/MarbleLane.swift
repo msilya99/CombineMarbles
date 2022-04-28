@@ -39,11 +39,12 @@ struct MarbleLane: View {
                         .position(x: proxy.denormalize(x: element.pos), y: proxy.size.height / 2)
                         .gesture(DragGesture().onChanged {
                             guard self.isDraggable else { return }
-                            if let index = self.pos.firstIndex(of: element) {
+                            if let index = self.pos.firstIndex(of: element),
+                               $0.location.x > 4,
+                               $0.location.x < proxy.size.width {
                                 self.pos[index].pos = proxy.normalize(x: $0.location.x)
                             }
                         })
-                        .frame(width: 50, height: 50, alignment: .center)
                         .zIndex(element.zIndex)
                 }
             }

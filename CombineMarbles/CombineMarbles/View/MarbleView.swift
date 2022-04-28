@@ -23,5 +23,4 @@ struct Marble: View {
                     .colorInvert())
         }
     }
-
 }

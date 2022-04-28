@@ -57,7 +57,6 @@ struct SequancePublisher: Publisher {
             guard requested <= events.count else { return }
 
             events[emitted..<requested].forEach { event in
-
                 self.scheduler.schedule(after: .milliseconds(event.timeInterval)) { [weak self] in
                     switch event.type {
                     case .next:

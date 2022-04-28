@@ -9,8 +9,6 @@ import SwiftUI
 
 struct ErrorView: View {
     var body: some View {
-        Text("X")
-            .foregroundColor(.red)
-            .font(.system(size: 30))
+        Text("X").foregroundColor(.red).font(.system(size: 30))
     }
 }

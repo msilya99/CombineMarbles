@@ -8,63 +8,6 @@
 import SwiftUI
 import Combine
 
-class MarbleViewState: ObservableObject {
-
-    private let initionalState: (input: [[TimedEvent]], generator: ([SequancePublisher], SequnceScheduler) -> SequanceExperimentRunner)
-    private var generator: ([SequancePublisher], SequnceScheduler) -> SequanceExperimentRunner
-    private var cancellable = Set<AnyCancellable>()
-
-    @Published var input: [[TimedEvent]] {
-        didSet { update() }
-    }
-
-    @Published var output: [TimedEvent] = []
-
-    init(input: [[TimedEvent]], generator: @escaping ([SequancePublisher], SequnceScheduler) -> SequanceExperimentRunner) {
-        self.input = input
-        self.generator = generator
-        self.initionalState = (input, generator)
-    }
-
-    func update() {
-        let scheduler = SequnceScheduler()
-        generator(self.input.map { SequancePublisher(events: $0, scheduler: scheduler) }, scheduler)
-            .run(scheduler: scheduler)
-            .receive(on: RunLoop.main)
-            .assign(to: \.output, on: self)
-            .store(in: &cancellable)
-    }
-
-    func resetToInitionalState() {
-        input = initionalState.input
-        generator = initionalState.generator
-    }
-}
-
-extension TupleOperator {
-    var state: MarbleViewState {
-        return MarbleViewState(
-            input: [input1, input2],
-            generator: { publisher, _ in
-                let combined = self.operation(publisher[0], publisher[1])
-                return SequanceExperiment(publisher: combined)
-            }
-        )
-    }
-}
-
-extension SingleOperator {
-    var state: MarbleViewState {
-        return MarbleViewState(
-            input: [input],
-            generator: { publisher, scheduler in
-                let combined = self.operation(publisher[0], scheduler)
-                return SequanceExperiment(publisher: combined)
-            }
-        )
-    }
-}
-
 struct MarblesScreen: View {
     @ObservedObject var state: MarbleViewState
 

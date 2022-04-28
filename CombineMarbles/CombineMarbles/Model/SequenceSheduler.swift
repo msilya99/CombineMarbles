@@ -31,7 +31,6 @@ class SequnceScheduler: Scheduler {
         let action: () -> ()
 
         init(uuid: UUID = UUID(), time: Time, interval: Int64? = nil, action: @escaping () -> ()) {
-
             self.uuid = uuid
             self.time = time
             self.interval = interval

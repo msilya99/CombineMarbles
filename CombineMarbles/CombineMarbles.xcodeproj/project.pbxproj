@@ -33,6 +33,7 @@
 		B21A21DF281995C7006F59CA /* MarbleLane.swift in Sources */ = {isa = PBXBuildFile; fileRef = B21A21DE281995C7006F59CA /* MarbleLane.swift */; };
 		B21A21E1281995E7006F59CA /* MarbleScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = B21A21E0281995E7006F59CA /* MarbleScreen.swift */; };
 		B27BEFC2281A9E51001F9103 /* Operators.swift in Sources */ = {isa = PBXBuildFile; fileRef = B27BEFC1281A9E51001F9103 /* Operators.swift */; };
+		B27BEFC4281AA6CA001F9103 /* MarbleViewState.swift in Sources */ = {isa = PBXBuildFile; fileRef = B27BEFC3281AA6CA001F9103 /* MarbleViewState.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -63,6 +64,7 @@
 		B21A21DE281995C7006F59CA /* MarbleLane.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MarbleLane.swift; sourceTree = "<group>"; };
 		B21A21E0281995E7006F59CA /* MarbleScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MarbleScreen.swift; sourceTree = "<group>"; };
 		B27BEFC1281A9E51001F9103 /* Operators.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Operators.swift; sourceTree = "<group>"; };
+		B27BEFC3281AA6CA001F9103 /* MarbleViewState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MarbleViewState.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -95,8 +97,8 @@
 		B21A219D28199210006F59CA /* CombineMarbles */ = {
 			isa = PBXGroup;
 			children = (
+				B27BEFC5281AA781001F9103 /* ViewModel */,
 				B21A21AE2819929B006F59CA /* View */,
-				B21A21AD28199288006F59CA /* Operators */,
 				B21A21AC28199284006F59CA /* Model */,
 				B21A219E28199210006F59CA /* CombineMarblesApp.swift */,
 				B21A21A028199210006F59CA /* ContentView.swift */,
@@ -117,6 +119,8 @@
 		B21A21AC28199284006F59CA /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				B21A21AD28199288006F59CA /* Operators */,
+				B21A21BE281993E4006F59CA /* Operator.swift */,
 				B21A21B0281992D4006F59CA /* OperatorCollection.swift */,
 				B21A21B2281992F5006F59CA /* Event.swift */,
 				B21A21B428199310006F59CA /* SequenceExperiment.swift */,
@@ -130,7 +134,6 @@
 		B21A21AD28199288006F59CA /* Operators */ = {
 			isa = PBXGroup;
 			children = (
-				B21A21BE281993E4006F59CA /* Operator.swift */,
 				B21A21C0281993FD006F59CA /* CombineOperators.swift */,
 				B21A21C228199413006F59CA /* FilterOperators.swift */,
 				B21A21C428199430006F59CA /* MapOperators.swift */,
@@ -155,6 +158,14 @@
 				B21A21E0281995E7006F59CA /* MarbleScreen.swift */,
 			);
 			path = View;
+			sourceTree = "<group>";
+		};
+		B27BEFC5281AA781001F9103 /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				B27BEFC3281AA6CA001F9103 /* MarbleViewState.swift */,
+			);
+			path = ViewModel;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -251,6 +262,7 @@
 				B21A21D1281994D7006F59CA /* TimingOperators.swift in Sources */,
 				B21A21D728199542006F59CA /* ErrorView.swift in Sources */,
 				B21A21DD281995AC006F59CA /* MarbleView.swift in Sources */,
+				B27BEFC4281AA6CA001F9103 /* MarbleViewState.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

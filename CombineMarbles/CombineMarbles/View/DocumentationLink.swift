@@ -18,7 +18,7 @@ struct DocumentationLink: View {
                     .lineLimit(1)
                     .scaledToFit()
                     .minimumScaleFactor(0.01)
-                    .padding(16)
+                    .padding(.horizontal, 8)
             }.frame(maxWidth: .infinity, alignment: .center)
         }
     }

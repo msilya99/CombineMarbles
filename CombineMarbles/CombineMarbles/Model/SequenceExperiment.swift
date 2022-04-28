@@ -9,13 +9,13 @@ import Foundation
 import Combine
 
 protocol SequanceExperimentRunner {
-    func run(scheduler: SequnceScheduler) -> Future<[TimedEvent], Never>
+    func run(scheduler: SequenceScheduler) -> Future<[TimedEvent], Never>
 }
 
 struct SequanceExperiment<P: Publisher>: SequanceExperimentRunner where P.Failure == FailureString, P.Output == String {
     let publisher: P
 
-    func run(scheduler: SequnceScheduler) -> Future<[TimedEvent], Never>  {
+    func run(scheduler: SequenceScheduler) -> Future<[TimedEvent], Never>  {
         return Future { callback in
             var cancellable: Cancellable?
             var collected = [TimedEvent]()

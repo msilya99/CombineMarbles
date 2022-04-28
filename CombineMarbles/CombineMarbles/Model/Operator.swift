@@ -29,13 +29,13 @@ struct SingleOperator<Input>: Operator {
     let name: String
     let description: String
     let documentationURL: String
-    let operation: (SequancePublisher, SequnceScheduler) -> AnyPublisher<String, FailureString>
+    let operation: (SequancePublisher, SequenceScheduler) -> AnyPublisher<String, FailureString>
     let input: [TimedEvent]
 
     init(name: String,
          description: String,
          documentationURL: String,
-         operation: @escaping (SequancePublisher, SequnceScheduler) -> AnyPublisher<String, FailureString>,
+         operation: @escaping (SequancePublisher, SequenceScheduler) -> AnyPublisher<String, FailureString>,
          input: [TimedEvent]) {
         self.name = name
         self.description = description

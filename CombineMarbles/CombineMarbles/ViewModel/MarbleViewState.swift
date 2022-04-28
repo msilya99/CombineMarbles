@@ -18,13 +18,13 @@ class MarbleViewState: ObservableObject {
 
     @Published var output: [TimedEvent] = []
 
-    private let initionalState: (input: [[TimedEvent]], generator: ([SequancePublisher], SequnceScheduler) -> SequanceExperimentRunner)
-    private var generator: ([SequancePublisher], SequnceScheduler) -> SequanceExperimentRunner
+    private let initionalState: (input: [[TimedEvent]], generator: ([SequancePublisher], SequenceScheduler) -> SequanceExperimentRunner)
+    private var generator: ([SequancePublisher], SequenceScheduler) -> SequanceExperimentRunner
     private var cancellable = Set<AnyCancellable>()
 
     // MARK: - initialization
 
-    init(input: [[TimedEvent]], generator: @escaping ([SequancePublisher], SequnceScheduler) -> SequanceExperimentRunner) {
+    init(input: [[TimedEvent]], generator: @escaping ([SequancePublisher], SequenceScheduler) -> SequanceExperimentRunner) {
         self.input = input
         self.generator = generator
         self.initionalState = (input, generator)
@@ -33,7 +33,7 @@ class MarbleViewState: ObservableObject {
     // MARK: - actions
 
     func update() {
-        let scheduler = SequnceScheduler()
+        let scheduler = SequenceScheduler()
         generator(self.input.map { SequancePublisher(events: $0, scheduler: scheduler) }, scheduler)
             .run(scheduler: scheduler)
             .receive(on: RunLoop.main)

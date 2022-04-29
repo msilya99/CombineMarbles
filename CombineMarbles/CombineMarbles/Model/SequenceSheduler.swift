@@ -8,11 +8,11 @@
 import Foundation
 import Combine
 
-class SequenceScheduler: Scheduler {
-    var now: SequenceScheduler.Time = Time(value: 0)
-    var minimumTolerance: SequenceScheduler.Time.Stride = 0
-    private var scheduled: [ScheduledAction] = []
+///Per Apple’s documentation, a scheduler is a protocol that defines when and how to execute a closure.
+///A scheduler provides the context to execute a future action, either as soon as possible or at a future date.
+///You can use a scheduler to execute code as soon as possible, or after a future date. Individual scheduler implementations use whatever time-keeping system makes sense for them. 
 
+class SequenceScheduler: Scheduler {
     struct Time: Comparable {
         private(set) var value: Int64
         var magnitude: UInt32 {
@@ -37,6 +37,14 @@ class SequenceScheduler: Scheduler {
             self.action = action
         }
     }
+
+    // MARK: - variables
+
+    var now: SequenceScheduler.Time = Time(value: 0)
+    var minimumTolerance: SequenceScheduler.Time.Stride = 0
+    private var scheduled: [ScheduledAction] = []
+
+    // MARK: - actions
 
     func schedule(after date: SequenceScheduler.Time, interval: Int64, tolerance: Int64, options: String?, _ action: @escaping () -> Void) -> Cancellable {
         let action = ScheduledAction(time: date, interval: interval, action: action)

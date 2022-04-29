@@ -8,11 +8,11 @@
 import Foundation
 import Combine
 
-protocol SequanceExperimentRunner {
+protocol SequenceExperimentRunner {
     func run(scheduler: SequenceScheduler) -> Future<[TimedEvent], Never>
 }
 
-struct SequanceExperiment<P: Publisher>: SequanceExperimentRunner where P.Failure == FailureString, P.Output == String {
+struct SequenceExperiment<P: Publisher>: SequenceExperimentRunner where P.Failure == FailureString, P.Output == String {
     let publisher: P
 
     func run(scheduler: SequenceScheduler) -> Future<[TimedEvent], Never>  {

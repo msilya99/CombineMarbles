@@ -9,6 +9,7 @@ import SwiftUI
 import Combine
 
 struct MarblesScreen: View {
+
     @ObservedObject var state: MarbleViewState
 
     let operation: Operator
@@ -21,7 +22,7 @@ struct MarblesScreen: View {
     var body: some View {
         VStack(alignment: .leading) {
             VStack(spacing: 24) {
-                ForEach(0..<state.input.count) {
+                ForEach(0..<state.input.count, id: \.self) {
                     MarbleLane(pos: self.$state.input[$0], isDraggable: true)
                         .frame(height: 50)
                 }

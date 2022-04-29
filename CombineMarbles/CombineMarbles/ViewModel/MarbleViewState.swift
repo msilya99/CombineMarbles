@@ -8,6 +8,8 @@
 import Foundation
 import Combine
 
+typealias InitialState = (input: [[TimedEvent]], generator: ([SequencePublisher], SequenceScheduler) -> SequenceExperimentRunner)
+
 class MarbleViewState: ObservableObject {
 
     // MARK: - variables
@@ -18,13 +20,14 @@ class MarbleViewState: ObservableObject {
 
     @Published var output: [TimedEvent] = []
 
-    private let initionalState: (input: [[TimedEvent]], generator: ([SequancePublisher], SequenceScheduler) -> SequanceExperimentRunner)
-    private var generator: ([SequancePublisher], SequenceScheduler) -> SequanceExperimentRunner
+    private let initionalState: InitialState
+
+    private var generator: ([SequencePublisher], SequenceScheduler) -> SequenceExperimentRunner
     private var cancellable = Set<AnyCancellable>()
 
     // MARK: - initialization
 
-    init(input: [[TimedEvent]], generator: @escaping ([SequancePublisher], SequenceScheduler) -> SequanceExperimentRunner) {
+    init(input: [[TimedEvent]], generator: @escaping ([SequencePublisher], SequenceScheduler) -> SequenceExperimentRunner) {
         self.input = input
         self.generator = generator
         self.initionalState = (input, generator)
@@ -32,11 +35,13 @@ class MarbleViewState: ObservableObject {
 
     // MARK: - actions
 
+    /// was RunLoop.main but now DispatchQueue.main because of
+    /// https://www.avanderlee.com/combine/runloop-main-vs-dispatchqueue-main/
     func update() {
         let scheduler = SequenceScheduler()
-        generator(self.input.map { SequancePublisher(events: $0, scheduler: scheduler) }, scheduler)
+        generator(self.input.map { SequencePublisher(events: $0, scheduler: scheduler) }, scheduler)
             .run(scheduler: scheduler)
-            .receive(on: RunLoop.main)
+            .receive(on: DispatchQueue.main)
             .assign(to: \.output, on: self)
             .store(in: &cancellable)
     }
@@ -53,7 +58,7 @@ extension TupleOperator {
             input: [input1, input2],
             generator: { publisher, _ in
                 let combined = self.operation(publisher[0], publisher[1])
-                return SequanceExperiment(publisher: combined)
+                return SequenceExperiment(publisher: combined)
             }
         )
     }
@@ -65,7 +70,7 @@ extension SingleOperator {
             input: [input],
             generator: { publisher, scheduler in
                 let combined = self.operation(publisher[0], scheduler)
-                return SequanceExperiment(publisher: combined)
+                return SequenceExperiment(publisher: combined)
             }
         )
     }
